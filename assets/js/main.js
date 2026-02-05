@@ -23,3 +23,17 @@
   const year = document.querySelector("[data-year]");
   if (year) year.textContent = new Date().getFullYear();
 })();
+
+// Fecha menu mobile ao rolar (mantém foco na leitura)
+(function () {
+  const btn = document.querySelector("[data-nav-btn]");
+  const menu = document.querySelector("[data-nav-menu]");
+  if (!btn || !menu) return;
+
+  window.addEventListener("scroll", () => {
+    if (menu.getAttribute("data-open") === "true") {
+      menu.setAttribute("data-open", "false");
+      btn.setAttribute("aria-expanded", "false");
+    }
+  }, { passive: true });
+})();

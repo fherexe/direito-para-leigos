@@ -1,49 +1,79 @@
-/* Mobile-first, acessível e limpo */
-:root{
-  --bg: #0D121E;
-  --surface: rgba(255,255,255,.06);
-  --surface2: rgba(255,255,255,.10);
-  --text: #FFFFFF;
-  --muted: rgba(255,255,255,.78);
-  --line: rgba(255,255,255,.14);
-  --accent: #FDDEB0;
-  --accent2: rgba(253, 222, 176, .18);
-  --shadow: 0 14px 40px rgba(0,0,0,.35);
+/* ===========================
+   Blog Focus Upgrade (Mobile-first)
+   =========================== */
 
-  --radius: 16px;
-  --radius-sm: 12px;
-  --max: 1100px;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+:root{
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+
+  /* Brasil (acentos) */
+  --br-green: #009c3b;
+  --br-yellow: #ffdf00;
+  --br-blue: #002776;
+
+  --primary: var(--br-green);
+  --primaryText: #ffffff;
+
+  --highlight: var(--br-yellow);
+  --highlightText: #111111;
+
+  --link: #0b5bd3;        /* link mais “blog” */
+  --linkHover: #0847a4;
+
+  --radius: 8px;
+  --max: 1120px;
+
+  /* leitura */
+  --reading: 740px;       /* largura ideal da coluna */
+  --fs-base: 16.5px;      /* tamanho bom pra mobile */
+  --lh: 1.75;
 }
 
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
+
 body{
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(900px 600px at 15% 10%, rgba(253,222,176,.14), transparent 55%),
-              radial-gradient(900px 600px at 85% 30%, rgba(253,222,176,.08), transparent 55%),
-              var(--bg);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  font-size: var(--fs-base);
+  line-height: var(--lh);
+  text-rendering: optimizeLegibility;
 }
 
-a{ color: inherit; text-decoration: none; }
-a:hover{ text-decoration: underline; }
-img{ max-width: 100%; display: block; }
+/* Links como blog: claros, consistentes */
+a{
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover{
+  color: var(--linkHover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
+/* Container geral */
 .container{
   width: 100%;
   max-width: var(--max);
   margin: 0 auto;
-  padding: 18px 16px 44px;
+  padding: 12px 14px 44px;
 }
 
-/* Header */
+/* ===========================
+   Header (discreto, pequeno, “quieto”)
+   =========================== */
 .header{
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(13,18,30,.75);
+  background: rgba(255,255,255,.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -53,7 +83,7 @@ img{ max-width: 100%; display: block; }
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 12px 0;
+  padding: 8px 0;
 }
 
 .brand{
@@ -63,20 +93,23 @@ img{ max-width: 100%; display: block; }
   font-weight: 800;
   letter-spacing: .2px;
 }
+
 .brand__badge{
-  width: 36px;
-  height: 36px;
-  border-radius: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, var(--accent2), rgba(255,255,255,.06));
+  background: #fff;
   border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  color: var(--br-blue);
 }
+
 .brand__title{
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
+  line-height: 1.05;
+  font-size: 15px;
 }
 .brand__title span{
   font-size: 12px;
@@ -84,262 +117,281 @@ img{ max-width: 100%; display: block; }
   color: var(--muted);
 }
 
-/* Mobile nav */
-.nav{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
+/* Menu */
+.nav{ display:flex; align-items:center; gap:10px; }
 .nav__btn{
   border: 1px solid var(--line);
-  background: rgba(255,255,255,.06);
+  background: #fff;
   color: var(--text);
-  padding: 10px 12px;
-  border-radius: 12px;
+  padding: 8px 10px;
+  border-radius: var(--radius);
   cursor: pointer;
+  font-weight: 700;
 }
-.nav__btn:focus{ outline: 3px solid rgba(253,222,176,.25); outline-offset: 2px; }
-
 .nav__menu{
   position: absolute;
-  left: 16px;
-  right: 16px;
-  top: 64px;
-  background: rgba(13,18,30,.95);
+  left: 14px;
+  right: 14px;
+  top: 54px;
+  background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 10px;
+  padding: 8px;
   display: none;
 }
-.nav__menu[data-open="true"]{ display: block; }
-
+.nav__menu[data-open="true"]{ display:block; }
 .nav__menu a{
-  display: flex;
-  align-items: center;
+  display:flex;
   justify-content: space-between;
-  padding: 12px 12px;
-  border-radius: 12px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  color: var(--text);
 }
 .nav__menu a:hover{
-  background: rgba(255,255,255,.06);
+  background: #f2f4f7;
   text-decoration: none;
 }
-.nav__menu small{ color: var(--muted); }
 
-/* Hero */
-.hero{
-  padding: 18px 0 10px;
-}
+/* ===========================
+   HERO mais “blog”: menos card, mais texto
+   =========================== */
+.hero{ padding: 12px 0 6px; }
 .hero__card{
-  border: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.04));
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow);
+  background: transparent;
+  border: none;
+  padding: 0;
 }
+
 .kicker{
   display: inline-flex;
-  gap: 8px;
   align-items: center;
-  color: var(--accent);
-  font-weight: 700;
+  gap: 8px;
+  font-weight: 800;
   font-size: 12px;
-  letter-spacing: .14em;
+  letter-spacing: .06em;
   text-transform: uppercase;
+  color: var(--br-blue);
+  background: #eef2ff;
+  border: 1px solid #dbe3ff;
+  padding: 6px 10px;
+  border-radius: 999px;
 }
+
 .hero h1{
   margin: 10px 0 8px;
-  font-size: 26px;
-  line-height: 1.15;
+  font-size: 28px;
+  line-height: 1.2;
 }
 .hero p{
   margin: 0 0 12px;
   color: var(--muted);
+  max-width: 70ch;
 }
+
 .hero__actions{
-  display: flex;
+  display:flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 12px;
+  margin-top: 10px;
 }
 
+/* Botões mais simples (sem cara de “landing page agressiva”) */
 .btn{
+  display:inline-block;
   border: 1px solid var(--line);
-  background: rgba(255,255,255,.06);
+  background: #fff;
   color: var(--text);
   padding: 12px 14px;
-  border-radius: 14px;
-  font-weight: 700;
+  border-radius: var(--radius);
+  font-weight: 800;
   cursor: pointer;
-  text-align: center;
+  text-align:center;
 }
-.btn:hover{ background: rgba(255,255,255,.10); text-decoration: none; }
-.btn--accent{
-  background: rgba(253,222,176,.16);
-  border-color: rgba(253,222,176,.32);
-}
-.btn--accent:hover{ background: rgba(253,222,176,.22); }
+.btn:hover{ background:#f8fafc; text-decoration:none; }
 
-/* Cards / grids */
-.section{
-  margin-top: 18px;
+.btn--accent{
+  background: var(--br-green);
+  color: #fff;
+  border-color: rgba(0,156,59,.35);
 }
+.btn--accent:hover{ filter: brightness(.96); }
+
+/* ===========================
+   Seções / cards (limpos)
+   =========================== */
+.section{ margin-top: 18px; }
 .section__head{
-  display: flex;
-  align-items: flex-end;
+  display:flex;
+  align-items:flex-end;
   justify-content: space-between;
   gap: 10px;
   margin-bottom: 10px;
 }
-.section__head h2{
-  margin: 0;
-  font-size: 18px;
-}
-.section__head p{
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-}
+.section__head h2{ margin:0; font-size: 16px; }
+.section__head p{ margin:0; color: var(--muted); font-size: 13px; }
 
-.grid{
-  display: grid;
-  gap: 12px;
-}
+.grid{ display:grid; gap: 12px; }
+
 .card{
+  background: #fff;
   border: 1px solid var(--line);
-  background: rgba(255,255,255,.05);
   border-radius: var(--radius);
   padding: 14px;
+  color: var(--text);
 }
-.card h3{
-  margin: 0 0 6px;
-  font-size: 16px;
-}
-.card p{
-  margin: 0;
-  color: var(--muted);
-  font-size: 14px;
-}
-.card__meta{
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 12px;
-}
+.card:hover{ background:#fbfbfc; text-decoration:none; }
+
+.card h3{ margin: 6px 0 6px; font-size: 16px; line-height: 1.25; }
+.card p{ margin:0; color: var(--muted); font-size: 14px; }
+.card__meta{ display:flex; gap:10px; margin-top:10px; color: var(--muted); font-size: 12px; }
+
 .pill{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 10px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding: 6px 10px;
   border-radius: 999px;
   border: 1px solid var(--line);
-  background: rgba(255,255,255,.06);
-  font-weight: 700;
+  background:#f2f4f7;
+  font-weight:800;
   font-size: 12px;
 }
 .pill--accent{
-  border-color: rgba(253,222,176,.35);
-  background: rgba(253,222,176,.12);
+  background: var(--br-yellow);
+  border-color: #e6d500;
+  color: #111;
 }
 
-/* Ad placeholder */
-.ad{
-  border: 1px dashed rgba(255,255,255,.26);
-  background: rgba(255,255,255,.04);
-  border-radius: var(--radius);
-  padding: 14px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-/* Content pages */
+/* ===========================
+   🔥 Leitura: layout de artigo “blog de sucesso”
+   =========================== */
 .page-title{
-  margin: 16px 0 6px;
-  font-size: 22px;
+  margin: 14px 0 6px;
+  font-size: 26px;
   line-height: 1.2;
 }
 .page-subtitle{
   margin: 0 0 14px;
   color: var(--muted);
+  max-width: 70ch;
 }
 
+/* A mágica: coluna de leitura */
 .content{
+  background: #fff;
   border: 1px solid var(--line);
-  background: rgba(255,255,255,.05);
   border-radius: var(--radius);
-  padding: 16px;
-}
-.content h2{ margin-top: 18px; font-size: 18px; }
-.content ul{ padding-left: 18px; }
-.content li{ margin: 6px 0; }
-.note{
-  border-left: 3px solid rgba(253,222,176,.6);
-  background: rgba(253,222,176,.08);
-  padding: 12px 12px;
-  border-radius: 12px;
-  color: var(--muted);
+  padding: 18px 16px;
 }
 
-/* Forms */
-.form{
-  display: grid;
-  gap: 12px;
+/* Limita a largura do texto dentro do article */
+.content > *{
+  max-width: var(--reading);
+  margin-left: auto;
+  margin-right: auto;
 }
-.field{
-  display: grid;
-  gap: 6px;
+
+/* Tipografia de conteúdo */
+.content h2{
+  margin-top: 22px;
+  font-size: 20px;
+  line-height: 1.25;
 }
-label{ font-weight: 700; font-size: 13px; }
+.content h3{
+  margin-top: 18px;
+  font-size: 17px;
+  line-height: 1.25;
+}
+.content p{
+  margin: 12px auto;
+}
+.content ul, .content ol{
+  padding-left: 20px;
+}
+.content li{
+  margin: 6px 0;
+}
+.content strong{ font-weight: 800; }
+
+/* Destaque informativo discreto (não grita) */
+.note{
+  border-left: 4px solid var(--br-green);
+  background: #f1fbf5;
+  color: #14532d;
+  padding: 12px 12px;
+  border-radius: var(--radius);
+}
+
+/* Ajuda navegação interna (anchors) com header sticky */
+[id]{
+  scroll-margin-top: 72px;
+}
+
+/* Placeholder anúncio sem distrair */
+.ad{
+  border: 1px dashed #cfd6df;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 14px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Form */
+.form{ display:grid; gap: 12px; }
+.field{ display:grid; gap: 6px; }
+label{ font-weight: 800; font-size: 13px; }
 input, textarea, select{
   border: 1px solid var(--line);
-  background: rgba(255,255,255,.06);
+  background: #fff;
   color: var(--text);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 12px;
   font: inherit;
 }
 textarea{ min-height: 120px; resize: vertical; }
 input:focus, textarea:focus, select:focus{
-  outline: 3px solid rgba(253,222,176,.25);
+  outline: 3px solid rgba(0,156,59,.18);
   outline-offset: 2px;
 }
 
 /* Footer */
 .footer{
-  margin-top: 28px;
+  margin-top: 22px;
   border-top: 1px solid var(--line);
-  padding-top: 16px;
+  padding-top: 14px;
   color: var(--muted);
   font-size: 13px;
 }
-.footer a{ color: var(--text); }
 
-/* Desktop enhancements */
+/* Desktop */
 @media (min-width: 780px){
-  .container{ padding: 18px 20px 60px; }
+  .container{ padding: 12px 18px 60px; }
 
-  .nav__btn{ display: none; }
-
+  .nav__btn{ display:none; }
   .nav__menu{
     position: static;
-    display: flex !important;
+    display:flex !important;
     background: transparent;
-    border: none;
-    box-shadow: none;
-    padding: 0;
+    border:none;
+    padding:0;
     gap: 10px;
+    left:auto; right:auto; top:auto;
   }
   .nav__menu a{
-    padding: 10px 10px;
+    padding: 8px 10px;
+    border-radius: 8px;
   }
 
   .hero__actions{
     flex-direction: row;
-    align-items: center;
+    align-items:center;
   }
 
   .grid--2{ grid-template-columns: repeat(2, 1fr); }
   .grid--3{ grid-template-columns: repeat(3, 1fr); }
+
+  /* Artigo mais confortável no desktop */
+  .content{ padding: 22px 22px; }
+  .page-title{ font-size: 30px; }
 }

@@ -1,1 +1,12 @@
-Sitemap: https://seunomegithub.github.io/direito-para-leigos/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://fherexe.github.io/direito-para-leigos/</loc>
+  </url>
+  <url>
+    <loc>https://fherexe.github.io/direito-para-leigos/categoria.html</loc>
+  </url>
+  <url>
+    <loc>https://fherexe.github.io/direito-para-leigos/pilar-demissao.html</loc>
+  </url>
+</urlset>
