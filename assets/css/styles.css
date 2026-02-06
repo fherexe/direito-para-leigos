@@ -66,9 +66,7 @@ a:hover{
   padding: 12px 14px 44px;
 }
 
-/* ===========================
-   Header (discreto, pequeno, “quieto”)
-   =========================== */
+
 .header{
   position: sticky;
   top: 0;
@@ -76,6 +74,16 @@ a:hover{
   background: rgba(255,255,255,.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
+
+  /* animação do hide/show */
+  transform: translateY(0);
+  transition: transform 220ms ease;
+  will-change: transform;
+}
+
+/* quando estiver rolando pra baixo no mobile */
+.header.header--hide{
+  transform: translateY(-110%);
 }
 
 .header__row{
@@ -83,12 +91,19 @@ a:hover{
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  padding: 8px 0;
+
+  /* menor que antes */
+  padding: 6px 0;
 }
 
-.logoheader {
-  width: 40px;
-  height: 40px;
+
+/* Logo responsiva (sem distorcer) */
+.logoheader{
+  display: block;
+  width: auto;
+  height: clamp(34px, 6vw, 52px); /* mobile→desktop */
+  max-width: 160px;
+  object-fit: contain;
 }
 
 /* Menu */
@@ -340,7 +355,7 @@ input:focus, textarea:focus, select:focus{
 
 /* Desktop */
 @media (min-width: 780px){
-  .container{ padding: 12px 18px 60px; }
+  .container{ padding: 30px 18px 30px; }
 
   .nav__btn{ display:none; }
   .nav__menu{
@@ -368,4 +383,19 @@ input:focus, textarea:focus, select:focus{
   /* Artigo mais confortável no desktop */
   .content{ padding: 22px 22px; }
   .page-title{ font-size: 30px; }
+
+  @media (min-width: 780px){
+  /* header mais baixo no PC */
+  .header__row{ padding: 4px 0; }
+
+  /* logo ainda mais controlada no PC */
+  .logoheader{
+    height: clamp(36px, 2.6vw, 46px);
+    max-width: 180px;
+  }
+
+  /* melhora alinhamento do menu com header compacto */
+  .nav__menu a{ padding: 6px 10px; }
+}
+
 }
