@@ -4,14 +4,13 @@
   --bg:#f7f8fb;
   --surface:#fff;
   --text:#111827;
-  --muted:#6b7280;
+  --muted:#424753;
   --line:#e5e7eb;
 
   --br-green:#009c3b;
-  --br-yellow:#ffdf00;
+  --br-yellow:#F8B708;
   --br-blue:#002776;
 
-  --link:#0b5bd3;
   --linkHover:#0847a4;
 
   --radius:8px;
@@ -31,13 +30,16 @@ body{
   line-height:var(--lh);
 }
 
+header a { 
+  color: var(--br-blue);
+  font-weight: 550;
+}
+
 a{
-  color:var(--link);
   text-decoration:none;
 }
 a:hover{
   color:var(--linkHover);
-  text-decoration:underline;
 }
 
 .container{
@@ -51,7 +53,7 @@ a:hover{
   position:sticky;
   top:0;
   background:rgba(255,255,255,.95);
-  border-bottom:1px solid var(--line);
+  border-bottom:1.5px solid rgba(71, 71, 71, 0.171);
   z-index:10;
 }
 .header__row{
@@ -71,6 +73,7 @@ a:hover{
   padding:8px 10px;
   border-radius:var(--radius);
   font-weight:700;
+  cursor:pointer;
 }
 .nav__menu{
   display:none;
@@ -115,11 +118,17 @@ a:hover{
   border:1px solid var(--line);
   background:#fff;
   font-weight:700;
+  display:inline-block;
+  cursor:pointer;
 }
 .btn--accent{
   background:var(--br-green);
   color:#fff;
   border-color:rgba(0,156,59,.4);
+}
+.btn--full{
+  width:100%;
+  text-align:center;
 }
 
 /* SECTIONS */
@@ -202,4 +211,216 @@ a:hover{
   }
   .nav__btn{display:none}
   .nav__menu{display:flex;gap:12px}
+}
+
+/* ===========================
+   BLOCOS coloridos (atalhos)
+   =========================== */
+.blocks{
+  margin-top: 18px;
+}
+
+.blocks__head{
+  display:flex;
+  align-items:flex-end;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.blocks__head h2{ margin:0; font-size: 16px; }
+.blocks__head p{ margin:0; color: var(--muted); font-size: 13px; }
+
+.blocks__grid{
+  display:grid;
+  gap: 12px;
+}
+
+.block{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  padding: 14px 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(17,24,39,.10);
+  color: white;
+  text-decoration: none;
+  transition: transform .12s ease, filter .12s ease;
+}
+.block:hover{
+  transform: translateY(-1px);
+  text-decoration:none;
+  color: black;
+}
+.block__icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display:grid;
+  place-items:center;
+  flex: 0 0 auto;
+}
+.block__text{
+  display:grid;
+  gap: 2px;
+  min-width: 0;
+}
+.block__text strong{
+  font-size: 15px;
+  line-height: 1.2;
+}
+.block__text span{
+  font-size: 13px;
+  line-height: 1.35;
+}
+.block__arrow{
+  margin-left:auto;
+  font-weight: 900;
+  opacity: .75;
+}
+
+/* Variações de cor */
+.block--green{
+  background-color: var(--br-green);
+}
+.block--yellow{
+  background-color:var(--br-yellow);
+}
+.block--blue{
+  background-color: var(--linkHover);
+}
+.block--gray{
+  background-color: rgb(44, 44, 44);
+}
+
+/* Desktop */
+@media (min-width: 780px){
+  .blocks__grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .block{
+    padding: 16px 16px;
+  }
+}
+
+/* ===========================
+   CONTATO (novo)
+   =========================== */
+.hero--contact{
+  padding-bottom: 6px;
+}
+
+.contact{
+  display:grid;
+  gap: 14px;
+  align-items:start;
+}
+
+/* cards */
+.contact__card,
+.info-card{
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 14px;
+}
+
+.contact__title{
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+.contact__desc{
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* form */
+.form{
+  display:grid;
+  gap: 12px;
+}
+
+.field{
+  display:grid;
+  gap: 6px;
+}
+
+label{
+  font-weight: 800;
+  font-size: 13px;
+}
+
+input, textarea, select{
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--text);
+  border-radius: var(--radius);
+  padding: 12px;
+  font: inherit;
+}
+
+textarea{
+  min-height: 140px;
+  resize: vertical;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: 3px solid rgba(36, 230, 110, 0.18);
+  outline-offset: 2px;
+}
+
+.helper{
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* info sidebar */
+.info-card__title{
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.info-list{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text);
+}
+.info-list li{
+  margin: 6px 0;
+}
+.info-list strong{
+  font-weight: 800;
+}
+
+.note{
+  border-left: 4px solid var(--br-green);
+  background: #f1fbf5;
+  color: #14532d;
+  padding: 12px 12px;
+  border-radius: var(--radius);
+  margin-top: 12px;
+}
+
+.quick-actions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.contact-lines{
+  margin: 0;
+  display:grid;
+  gap: 6px;
+  color: var(--muted);
+}
+
+/* layout desktop */
+@media (min-width: 900px){
+  .contact{
+    grid-template-columns: 1.4fr .9fr;
+  }
 }
