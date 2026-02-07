@@ -1,34 +1,109 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Termos de Uso | Direito CLT</title>
+
+  <title>Termos de uso | Direito CLT</title>
+
+  <meta name="description"
+    content="Termos e condições de uso do site Direito CLT." />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <div class="header__row">
+        <a href="index.html">
+          <img class="logoheader" src="assets/img/logotipo direitos/logotipo.png" alt="Direito CLT">
+        </a>
+
+        <nav class="nav" aria-label="Menu principal">
+          <button class="nav__btn" data-nav-btn aria-expanded="false" aria-controls="menu">Menu</button>
+          <div class="nav__menu" id="menu" data-nav-menu data-open="false">
+            <a href="categoria.html">Categorias</a>
+            <a href="pilar-demissao.html">Demissão</a>
+            <a href="sobre.html">Sobre</a>
+            <a class="nav__cta" href="contato.html">Fale com um especialista</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
   <main class="container">
-    <h1 class="page-title">Termos de Uso</h1>
-    <p class="page-subtitle">Modelo simples (adapte ao seu caso real).</p>
 
-    <section class="content">
-      <h2>Uso do conteúdo</h2>
-      <p>O conteúdo é informativo e pode ser atualizado sem aviso.</p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__card">
+        <div class="kicker">TERMOS DE USO</div>
 
-      <h2>Sem consultoria jurídica</h2>
-      <p class="note">
-        Nada aqui substitui orientação de um profissional. Cada caso tem detalhes próprios.
-      </p>
+        <h1>Termos e condições</h1>
 
-      <h2>Responsabilidade</h2>
-      <p>Você é responsável por decisões tomadas com base no conteúdo.</p>
+        <p>
+          Ao acessar o site Direito CLT, você concorda com os termos descritos abaixo.
+        </p>
+      </div>
     </section>
 
+    <!-- CONTEÚDO -->
+    <section class="section">
+      <div class="content">
+
+        <h2>Uso do conteúdo</h2>
+        <p>
+          O conteúdo disponibilizado neste site é exclusivamente informativo.
+          Ele não substitui orientação jurídica individualizada.
+        </p>
+
+        <h2>Responsabilidade</h2>
+        <p>
+          O Direito CLT não se responsabiliza por decisões tomadas com base
+          nas informações aqui publicadas sem a devida análise profissional.
+        </p>
+
+        <h2>Atualizações</h2>
+        <p>
+          As informações podem ser atualizadas ou modificadas a qualquer momento,
+          sem aviso prévio, para manter a conformidade com a legislação vigente.
+        </p>
+
+        <h2>Propriedade intelectual</h2>
+        <p>
+          Textos, estrutura e identidade visual pertencem ao Direito CLT.
+          É proibida a reprodução sem autorização, exceto nos limites da lei.
+        </p>
+
+        <h2>Aceitação dos termos</h2>
+        <p>
+          Ao continuar navegando no site, você declara estar ciente e de acordo
+          com estes termos de uso.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
-      <a href="index.html">Voltar</a> · © <span data-year></span>
+      <div class="grid grid--2">
+        <div>
+          <strong>Direito CLT © <span data-year></span></strong><br>
+          Conteúdo informativo. Não substitui orientação profissional.
+        </div>
+        <div>
+          <a href="privacidade.html">Privacidade</a> ·
+          <a href="termos.html" aria-current="page">Termos</a>
+        </div>
+      </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
   </main>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

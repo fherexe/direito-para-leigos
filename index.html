@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -14,199 +15,192 @@
 
 <body>
 
-<header class="header">
-  <div class="container">
-    <div class="header__row">
-      <a href="index.html">
-        <img class="logoheader" src="assets/img/logotipo direitos/logotipo.png" alt="Direito CLT">
-      </a>
+  <header class="header">
+    <div class="container">
+      <div class="header__row">
+        <a href="index.html">
+          <img class="logoheader" src="assets/img/logotipo direitos/logotipo.png" alt="Direito CLT">
+        </a>
 
-      <nav class="nav" aria-label="Menu principal">
-        <button class="nav__btn" data-nav-btn aria-expanded="false">
-          Menu
-        </button>
+        <nav class="nav" aria-label="Menu principal">
+          <button class="nav__btn" data-nav-btn aria-expanded="false" aria-controls="menu">
+            Menu
+          </button>
 
-        <div class="nav__menu" data-nav-menu data-open="false">
-          <a href="categoria.html">Trabalhista</a>
-          <a href="pilar-demissao.html">Demissão</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="contato.html">Fale com um especialista</a>
-        </div>
-      </nav>
+          <div class="nav__menu" id="menu" data-nav-menu data-open="false">
+            <a href="categoria.html">Categorias</a>
+            <a href="pilar-demissao.html">Demissão</a>
+            <a href="sobre.html">Sobre</a>
+            <a class="nav__cta" href="contato.html">Fale com um especialista</a>
+          </div>
+        </nav>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main class="container">
+  <main class="container">
 
-  <!-- HERO -->
-<section class="hero">
-  <div class="hero__card">
-    <div class="kicker">DIREITO TRABALHISTA</div>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__card">
+        <div class="kicker">DIREITO TRABALHISTA</div>
 
-    <h1>
-      Entenda seus direitos na CLT de forma clara, objetiva e confiável.
-    </h1>
-
-    <p>
-      Demissão, horas extras, salário, FGTS, atestados e banco de horas.
-      Aqui você aprende o que a lei garante ao trabalhador, sem juridiquês
-      e com exemplos do dia a dia.
-    </p>
-
-    <div class="hero__actions">
-      <a class="btn btn--accent" href="categoria.html">Acessar guias</a>
-    </div>
-  </div>
-</section>
-
-
-  <!-- POSTS -->
-  <section class="section">
-    <div class="section__head">
-      <h2>Últimas publicações</h2>
-      <p>Conteúdo recente</p>
-    </div>
-
-    <div class="grid grid--2">
-
-      <a class="card card--post" href="artigo.html">
-        <img
-          class="card__image"
-          src="assets/img/posts/demissao-sem-justa-causa.webp"
-          alt="Trabalhador analisando rescisão após demissão sem justa causa"
-          loading="lazy"
-        >
-
-        <span class="pill pill--accent">Artigo</span>
-
-        <h3>Fui demitido sem justa causa: quais são meus direitos?</h3>
+        <h1>
+          Entenda seus direitos na CLT de forma clara, objetiva e confiável.
+        </h1>
 
         <p>
-          Checklist completo do que você deve receber e como conferir sua rescisão.
+          Demissão, horas extras, salário, FGTS, atestados e banco de horas.
+          Aqui você aprende o que a lei garante ao trabalhador, sem juridiquês
+          e com exemplos do dia a dia.
         </p>
 
-        <div class="card__meta">
-          <span>Demissão</span><span>•</span><span>8 min</span>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="categoria.html">Acessar guias</a>
         </div>
-      </a>
+      </div>
+    </section>
 
-      <a class="card card--post" href="artigo.html">
-        <img
-          class="card__image"
-          src="assets/img/posts/atraso-salarial.png"
-          alt="Carteira de trabalho e calendário representando atraso salarial"
-          loading="lazy"
-        >
 
-        <span class="pill">Artigo</span>
+    <!-- POSTS -->
+    <section class="section">
+      <div class="section__head">
+        <h2>Últimas publicações</h2>
+        <p>Conteúdo recente</p>
+      </div>
 
-        <h3>A empresa pode atrasar salário? O que fazer</h3>
+      <div class="grid grid--2">
 
-        <p>
-          Quais passos tomar sem se complicar e sem cair em conselhos errados.
-        </p>
+        <a class="card card--post" href="artigo.html">
+          <img class="card__image" src="assets/img/posts/demissao-sem-justa-causa.webp"
+            alt="Trabalhador analisando rescisão após demissão sem justa causa" loading="lazy">
 
-        <div class="card__meta">
-          <span>Salário</span><span>•</span><span>7 min</span>
+          <span class="pill">Artigo</span>
+
+          <h3>Fui demitido sem justa causa: quais são meus direitos?</h3>
+
+          <p>
+            Descubra o dinheiro que você deve receber e como conferir sua rescisão.
+          </p>
+
+          <div class="card__meta">
+            <span>Demissão</span><span>•</span><span>8 min</span>
+          </div>
+        </a>
+
+        <a class="card card--post" href="artigo.html">
+          <img class="card__image" src="assets/img/posts/atraso-salarial.png"
+            alt="Carteira de trabalho e calendário representando atraso salarial" loading="lazy">
+
+          <span class="pill">Artigo</span>
+
+          <h3>A empresa pode atrasar salário? O que fazer</h3>
+
+          <p>
+            Quais passos tomar sem se complicar e sem cair em conselhos errados.
+          </p>
+
+          <div class="card__meta">
+            <span>Salário</span><span>•</span><span>7 min</span>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- BLOCOS DE ATALHO -->
+    <section class="blocks" aria-label="Atalhos do site">
+      <div class="blocks__head">
+        <h2>Acesso rápido</h2>
+        <p>Escolha um caminho e vá direto ao ponto.</p>
+      </div>
+
+      <div class="blocks__grid">
+        <a class="block block--blue" href="categoria.html" aria-label="Ver guias por tema (Trabalhista)">
+          <span class="block__icon" aria-hidden="true">
+            <!-- Ícone: livro/guia -->
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2Z" />
+              <path d="M8 6h8M8 10h8M8 14h6" />
+            </svg>
+          </span>
+          <div class="block__text">
+            <strong>Guias Trabalhistas</strong>
+            <span>Salário, jornada, direitos básicos…</span>
+          </div>
+          <span class="block__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="block block--blue" href="pilar-demissao.html" aria-label="Aprender sobre Demissão">
+          <span class="block__icon" aria-hidden="true">
+            <!-- Ícone: documento/check -->
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <path d="M14 2v6h6" />
+              <path d="M8 13l2 2 4-4" />
+            </svg>
+          </span>
+          <div class="block__text">
+            <strong>Demissão</strong>
+            <span>Rescisão, aviso prévio, verbas e checklist.</span>
+          </div>
+          <span class="block__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="block block--blue" href="sobre.html" aria-label="Sobre o Direito CLT">
+          <span class="block__icon" aria-hidden="true">
+            <!-- Ícone: info -->
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" />
+              <path d="M12 16v-5" />
+              <path d="M12 8h.01" />
+            </svg>
+          </span>
+          <div class="block__text">
+            <strong>Sobre</strong>
+            <span>Entenda a proposta do site e como usamos as fontes.</span>
+          </div>
+          <span class="block__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="block block--blue" href="contato.html" aria-label="Fale com um especialista">
+          <span class="block__icon" aria-hidden="true">
+            <!-- Ícone: chat -->
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+              <path d="M8 9h8M8 13h6" />
+            </svg>
+          </span>
+          <div class="block__text">
+            <strong>Fale com um especialista</strong>
+            <span>Tire dúvidas e entenda o melhor caminho no seu caso.</span>
+          </div>
+          <span class="block__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="grid grid--2">
+        <div>
+          <strong>Direito CLT © <span data-year></span>
+          </strong><br>
+          Conteúdo informativo. Não substitui orientação profissional.
         </div>
-      </a>
-
-    </div>
-  </section>
-
-  <!-- BLOCOS DE ATALHO -->
-<section class="blocks" aria-label="Atalhos do site">
-  <div class="blocks__head">
-    <h2>Acesso rápido</h2>
-    <p>Escolha um caminho e vá direto ao ponto.</p>
-  </div>
-
-  <div class="blocks__grid">
-    <a class="block block--green" href="categoria.html" aria-label="Ver guias por tema (Trabalhista)">
-      <span class="block__icon" aria-hidden="true">
-        <!-- Ícone: livro/guia -->
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"/>
-          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2Z"/>
-          <path d="M8 6h8M8 10h8M8 14h6"/>
-        </svg>
-      </span>
-      <div class="block__text">
-        <strong>Guias Trabalhistas</strong>
-        <span>Salário, jornada, direitos básicos…</span>
+        <div>
+          <a href="privacidade.html">Privacidade</a> ·
+          <a href="termos.html">Termos</a> ·
+          <a href="sobre.html">Sobre</a><br>
+        </div>
       </div>
-      <span class="block__arrow" aria-hidden="true">→</span>
-    </a>
+    </footer>
 
-    <a class="block block--yellow" href="pilar-demissao.html" aria-label="Aprender sobre Demissão">
-      <span class="block__icon" aria-hidden="true">
-        <!-- Ícone: documento/check -->
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-          <path d="M14 2v6h6"/>
-          <path d="M8 13l2 2 4-4"/>
-        </svg>
-      </span>
-      <div class="block__text">
-        <strong>Demissão</strong>
-        <span>Rescisão, aviso prévio, verbas e checklist.</span>
-      </div>
-      <span class="block__arrow" aria-hidden="true">→</span>
-    </a>
+  </main>
 
-    <a class="block block--blue" href="sobre.html" aria-label="Sobre o Direito CLT">
-      <span class="block__icon" aria-hidden="true">
-        <!-- Ícone: info -->
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/>
-          <path d="M12 16v-5"/>
-          <path d="M12 8h.01"/>
-        </svg>
-      </span>
-      <div class="block__text">
-        <strong>Sobre</strong>
-        <span>Entenda a proposta do site e como usamos as fontes.</span>
-      </div>
-      <span class="block__arrow" aria-hidden="true">→</span>
-    </a>
-
-    <a class="block block--gray" href="contato.html" aria-label="Fale com um especialista">
-      <span class="block__icon" aria-hidden="true">
-        <!-- Ícone: chat -->
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/>
-          <path d="M8 9h8M8 13h6"/>
-        </svg>
-      </span>
-      <div class="block__text">
-        <strong>Fale com um especialista</strong>
-        <span>Tire dúvidas e entenda o melhor caminho no seu caso.</span>
-      </div>
-      <span class="block__arrow" aria-hidden="true">→</span>
-    </a>
-  </div>
-</section>
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="grid grid--2">
-      <div>
-        <strong>Direito CLT</strong><br>
-        Conteúdo informativo. Não substitui orientação profissional.
-      </div>
-      <div>
-        <a href="privacidade.html">Privacidade</a> ·
-        <a href="termos.html">Termos</a> ·
-        <a href="sobre.html">Sobre</a><br>
-        © <span data-year></span>
-      </div>
-    </div>
-  </footer>
-
-</main>
-
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>

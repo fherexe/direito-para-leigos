@@ -1,25 +1,35 @@
 <!doctype html>
 <html lang="pt-br">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sobre | Direito CLT</title>
+
+  <title>Sobre o Direito CLT | Informação trabalhista clara e confiável</title>
+
+  <meta name="description"
+    content="Conheça o Direito CLT: um site criado para explicar direitos trabalhistas de forma clara, acessível e responsável." />
+
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header class="header">
     <div class="container">
       <div class="header__row">
-        <a class="brand" href="index.html">
-          <div class="brand__badge">⚖️</div>
-          <div class="brand__title">Direito CLT <span>Trabalhista CLT</span></div>
+        <a href="index.html">
+          <img class="logoheader" src="assets/img/logotipo direitos/logotipo.png" alt="Direito CLT">
         </a>
-        <nav class="nav">
+
+        <nav class="nav" aria-label="Menu principal">
           <button class="nav__btn" data-nav-btn aria-expanded="false" aria-controls="menu">Menu</button>
           <div class="nav__menu" id="menu" data-nav-menu data-open="false">
-            <a href="categoria.html">Trabalhista <small>→</small></a>
-            <a href="contato.html">Contato <small>→</small></a>
-            <a href="sobre.html">Sobre <small>→</small></a>
+            <a href="categoria.html">Categorias</a>
+            <a href="pilar-demissao.html">Demissão</a>
+            <a href="sobre.html" aria-current="page">Sobre</a>
+            <a class="nav__cta" href="contato.html">Fale com um especialista</a>
           </div>
         </nav>
       </div>
@@ -27,20 +37,79 @@
   </header>
 
   <main class="container">
-    <h1 class="page-title">Sobre</h1>
-    <section class="content">
-      <p>
-        O <strong>Direito CLT</strong> existe para explicar temas de <strong>direito trabalhista</strong>
-        com linguagem simples, exemplos reais e passos práticos.
-      </p>
-      <p class="note">
-        Aviso: O conteúdo é informativo e não substitui orientação de um profissional. Leis e interpretações podem variar por caso.
-      </p>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__card">
+        <div class="kicker">SOBRE O SITE</div>
+
+        <h1>Direito trabalhista explicado para quem precisa entender</h1>
+
+        <p>
+          O Direito CLT nasceu para ajudar trabalhadores a entenderem seus direitos
+          sem juridiquês, sem promessas vazias e sem desinformação.
+        </p>
+      </div>
     </section>
 
+    <!-- CONTEÚDO -->
+    <section class="section">
+      <div class="content">
+
+        <h2>Nossa missão</h2>
+        <p>
+          Tornar o direito trabalhista acessível. Muitas pessoas perdem dinheiro,
+          oportunidades ou prazos simplesmente por não entenderem o que a lei garante.
+          Nosso objetivo é reduzir essa distância entre a lei e a vida real.
+        </p>
+
+        <h2>Como produzimos o conteúdo</h2>
+        <p>
+          Todo o conteúdo é elaborado com base na legislação trabalhista brasileira,
+          em práticas reconhecidas e em situações comuns enfrentadas por trabalhadores.
+          A linguagem é sempre clara, direta e responsável.
+        </p>
+
+        <p>
+          Não utilizamos termos técnicos sem explicação e evitamos sensacionalismo.
+        </p>
+
+        <h2>O que o Direito CLT não é</h2>
+        <ul>
+          <li>Não é um escritório de advocacia</li>
+          <li>Não substitui consulta jurídica personalizada</li>
+          <li>Não promete resultados ou decisões judiciais</li>
+        </ul>
+
+        <h2>Quando procurar um especialista</h2>
+        <p>
+          Sempre que houver dúvida sobre valores, prazos, documentos ou decisões importantes,
+          recomendamos buscar orientação profissional qualificada.
+        </p>
+
+        <p>
+          <a class="btn btn--accent" href="contato.html">
+            Fale com um especialista
+          </a>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
-      © <span data-year></span> · <a href="privacidade.html">Privacidade</a> · <a href="termos.html">Termos</a>
+      <div class="grid grid--2">
+        <div>
+          <strong>Direito CLT © <span data-year></span></strong><br>
+          Conteúdo informativo. Não substitui orientação profissional.
+        </div>
+        <div>
+          <a href="privacidade.html">Privacidade</a> ·
+          <a href="termos.html">Termos</a>
+        </div>
+      </div>
     </footer>
+
   </main>
 
   <script src="assets/js/main.js"></script>
