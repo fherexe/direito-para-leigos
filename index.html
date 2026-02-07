@@ -12,39 +12,38 @@
 
   <link rel="stylesheet" href="assets/css/styles.css" />
 
-  <!-- Favicon padrão -->
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
   <link rel="shortcut icon" href="/assets/favicon/favicon.ico">
-
-  <!-- Apple (iPhone / iPad) -->
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-
-  <!-- Android / PWA -->
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon/android-chrome-512x512.png">
-
-  <!-- Manifest -->
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
-
-
 </head>
 
 <body>
 
+  <!-- HEADER -->
   <header class="header">
     <div class="container">
       <div class="header__row">
         <a href="index.html">
-          <img class="logoheader" src="assets/img/logotipo direitos/logotipo.png" alt="Direito CLT">
+          <img class="logoheader"
+               src="assets/img/logotipo direitos/logotipo.png"
+               alt="Direito CLT">
         </a>
 
         <nav class="nav" aria-label="Menu principal">
-          <button class="nav__btn" data-nav-btn aria-expanded="false" aria-controls="menu">
+          <button class="nav__btn"
+                  data-nav-btn
+                  aria-expanded="false"
+                  aria-controls="menu">
             Menu
           </button>
 
-          <div class="nav__menu" id="menu" data-nav-menu data-open="false">
+          <div class="nav__menu"
+               id="menu"
+               data-nav-menu
+               data-open="false">
             <a href="categoria.html">Categorias</a>
             <a href="pilar-demissao.html">Demissão</a>
             <a href="sobre.html">Sobre</a>
@@ -73,11 +72,17 @@
         </p>
 
         <div class="hero__actions">
-          <a class="btn btn--accent" href="categoria.html">Acessar guias</a>
+          <a class="btn btn--accent" href="categoria.html">
+            Acessar guias
+          </a>
         </div>
       </div>
     </section>
 
+    <!-- AD 1: abaixo do hero -->
+    <div class="ad ad--hero" data-ad="hero" aria-label="Espaço reservado para anúncio">
+      <span class="ad__label">Publicidade</span>
+    </div>
 
     <!-- POSTS -->
     <section class="section">
@@ -89,8 +94,10 @@
       <div class="grid grid--2">
 
         <a class="card card--post" href="artigo.html">
-          <img class="card__image" src="assets/img/posts/demissao-sem-justa-causa.webp"
-            alt="Trabalhador analisando rescisão após demissão sem justa causa" loading="lazy">
+          <img class="card__image"
+               src="assets/img/posts/demissao-sem-justa-causa.webp"
+               alt="Trabalhador analisando rescisão após demissão sem justa causa"
+               loading="lazy">
 
           <span class="pill">Artigo</span>
 
@@ -106,8 +113,10 @@
         </a>
 
         <a class="card card--post" href="artigo.html">
-          <img class="card__image" src="assets/img/posts/atraso-salarial.png"
-            alt="Carteira de trabalho e calendário representando atraso salarial" loading="lazy">
+          <img class="card__image"
+               src="assets/img/posts/atraso-salarial.png"
+               alt="Carteira de trabalho e calendário representando atraso salarial"
+               loading="lazy">
 
           <span class="pill">Artigo</span>
 
@@ -125,6 +134,11 @@
       </div>
     </section>
 
+    <!-- AD 2: entre conteúdos -->
+    <div class="ad ad--content" data-ad="content" aria-label="Espaço reservado para anúncio">
+      <span class="ad__label">Publicidade</span>
+    </div>
+
     <!-- BLOCOS DE ATALHO -->
     <section class="blocks" aria-label="Atalhos do site">
       <div class="blocks__head">
@@ -133,84 +147,56 @@
       </div>
 
       <div class="blocks__grid">
-        <a class="block block--blue" href="categoria.html" aria-label="Ver guias por tema (Trabalhista)">
-          <span class="block__icon" aria-hidden="true">
-            <!-- Ícone: livro/guia -->
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20" />
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5V4.5A2.5 2.5 0 0 1 6.5 2Z" />
-              <path d="M8 6h8M8 10h8M8 14h6" />
-            </svg>
-          </span>
+        <a class="block block--blue" href="categoria.html">
           <div class="block__text">
             <strong>Guias Trabalhistas</strong>
             <span>Salário, jornada, direitos básicos…</span>
           </div>
-          <span class="block__arrow" aria-hidden="true">→</span>
+          <span class="block__arrow">→</span>
         </a>
 
-        <a class="block block--blue" href="pilar-demissao.html" aria-label="Aprender sobre Demissão">
-          <span class="block__icon" aria-hidden="true">
-            <!-- Ícone: documento/check -->
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-              <path d="M14 2v6h6" />
-              <path d="M8 13l2 2 4-4" />
-            </svg>
-          </span>
+        <a class="block block--blue" href="pilar-demissao.html">
           <div class="block__text">
             <strong>Demissão</strong>
             <span>Rescisão, aviso prévio, verbas e checklist.</span>
           </div>
-          <span class="block__arrow" aria-hidden="true">→</span>
+          <span class="block__arrow">→</span>
         </a>
 
-        <a class="block block--blue" href="sobre.html" aria-label="Sobre o Direito CLT">
-          <span class="block__icon" aria-hidden="true">
-            <!-- Ícone: info -->
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z" />
-              <path d="M12 16v-5" />
-              <path d="M12 8h.01" />
-            </svg>
-          </span>
+        <a class="block block--blue" href="sobre.html">
           <div class="block__text">
             <strong>Sobre</strong>
-            <span>Entenda a proposta do site e como usamos as fontes.</span>
+            <span>Entenda a proposta do site.</span>
           </div>
-          <span class="block__arrow" aria-hidden="true">→</span>
+          <span class="block__arrow">→</span>
         </a>
 
-        <a class="block block--blue" href="contato.html" aria-label="Fale com um especialista">
-          <span class="block__icon" aria-hidden="true">
-            <!-- Ícone: chat -->
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
-              <path d="M8 9h8M8 13h6" />
-            </svg>
-          </span>
+        <a class="block block--blue" href="contato.html">
           <div class="block__text">
             <strong>Fale com um especialista</strong>
-            <span>Tire dúvidas e entenda o melhor caminho no seu caso.</span>
+            <span>Tire dúvidas e entenda seu caso.</span>
           </div>
-          <span class="block__arrow" aria-hidden="true">→</span>
+          <span class="block__arrow">→</span>
         </a>
       </div>
     </section>
 
+    <!-- AD 3: antes do footer -->
+    <div class="ad ad--footer" data-ad="footer" aria-label="Espaço reservado para anúncio">
+      <span class="ad__label">Publicidade</span>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
       <div class="grid grid--2">
         <div>
-          <strong>Direito CLT © <span data-year></span>
-          </strong><br>
+          <strong>Direito CLT © <span data-year></span></strong><br>
           Conteúdo informativo. Não substitui orientação profissional.
         </div>
         <div>
           <a href="privacidade.html">Privacidade</a> ·
           <a href="termos.html">Termos</a> ·
-          <a href="sobre.html">Sobre</a><br>
+          <a href="sobre.html">Sobre</a>
         </div>
       </div>
     </footer>
@@ -219,5 +205,4 @@
 
   <script src="assets/js/main.js"></script>
 </body>
-
 </html>

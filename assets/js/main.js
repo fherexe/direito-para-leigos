@@ -114,3 +114,42 @@
     yearEl.textContent = new Date().getFullYear();
   }
 })();
+
+
+/* ===========================
+   Lazy loading de anúncios
+   =========================== */
+(function () {
+  const ads = document.querySelectorAll("[data-ad]");
+
+  if (!("IntersectionObserver" in window) || !ads.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const ad = entry.target;
+
+        // ⚠️ Aqui futuramente entra o código AdSense
+        ad.classList.add("ad--loaded");
+
+        // Exemplo placeholder visual
+        ad.innerHTML = `
+          <span class="ad__label">Publicidade</span>
+          <div style="font-size:13px;color:#9ca3af;">
+            Anúncio carregado
+          </div>
+        `;
+
+        obs.unobserve(ad);
+      });
+    },
+    {
+      rootMargin: "200px", // carrega antes de aparecer
+      threshold: 0.1
+    }
+  );
+
+  ads.forEach(ad => observer.observe(ad));
+})();
