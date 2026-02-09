@@ -1,3 +1,13 @@
+(async function () {
+  const el = document.querySelector("[data-include]");
+  if (!el) return;
+
+  const file = el.getAttribute("data-include");
+  const res = await fetch(file);
+  el.outerHTML = await res.text();
+})();
+
+
 /* ===========================
    Menu mobile (abre / fecha)
    =========================== */

@@ -10,7 +10,7 @@
   <meta name="description"
     content="Entenda os direitos básicos na CLT: carteira assinada, contrato de experiência, férias, 13º, FGTS, estabilidade e documentos essenciais." />
 
-  <link rel="stylesheet" href="assets/css/styles.css"/>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -22,26 +22,8 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="container">
-      <div class="header__row">
-        <a href="index.html">
-          <img class="logoheader" src="assets/img/logotipo direitos/logotipo.png" alt="Direito CLT">
-        </a>
-
-        <nav class="nav" aria-label="Menu principal">
-          <button class="nav__btn" data-nav-btn aria-expanded="false" aria-controls="menu">Menu</button>
-
-          <div class="nav__menu" id="menu" data-nav-menu data-open="false">
-            <a href="categoria.html">Categorias</a>
-            <a href="pilar-demissao.html">Demissão</a>
-            <a href="sobre.html">Sobre</a>
-            <a class="nav__cta" href="contato.html">Fale com um especialista</a>
-          </div>
-        </nav>
-      </div>
-    </div>
+    <!-- HEADER -->
+<header class="header" data-include="assets/includes/header.html"></header>
   </header>
 
   <main class="container">
@@ -57,11 +39,6 @@
           O essencial para não cair em ciladas: carteira assinada, contrato de experiência,
           férias, 13º, FGTS, estabilidade e os documentos que você deve guardar.
         </p>
-
-        <div class="hero__actions">
-          <a class="btn btn--accent" href="#artigos">Ver artigos</a>
-          <a class="btn" href="contato.html">Tirar dúvida com especialista</a>
-        </div>
       </div>
     </section>
 
@@ -76,7 +53,7 @@
         <h2>Checklist rápido (o básico que você deve conhecer)</h2>
         <ul>
           <li><strong>Carteira assinada (CTPS)</strong>: registro correto, função, salário e data de admissão.</li>
-          <li><strong>Holos/contracheques</strong>: guarde para conferir descontos e pagamentos.</li>
+          <li><strong>Holerites/contracheques</strong>: guarde para conferir descontos e pagamentos.</li>
           <li><strong>Jornada</strong>: horário, intervalos e controle de ponto.</li>
           <li><strong>Férias + 1/3</strong>: regras de aquisição e pagamento.</li>
           <li><strong>13º salário</strong>: proporcional e prazos.</li>
@@ -101,10 +78,11 @@
 
       <div class="grid grid--2">
 
-        <a class="card card--post" href="artigo.html">
+        <!-- ✅ Corrigido: slug + imagem seguindo o padrão (capa.webp na pasta do artigo) -->
+        <a class="card card--post" href="artigos/carteira-assinada/">
           <img class="card__image"
-               src="assets/img/posts/cartao-de-trabalho.avif"
-               alt="Carteira de trabalho assinada e documentos"
+               src="artigos/carteira-assinada/capa.webp"
+               alt="Carteira de trabalho e documentos, representando carteira assinada"
                loading="lazy">
           <span class="pill">Artigo</span>
           <h3>Carteira assinada: o que precisa constar e como conferir</h3>
@@ -112,10 +90,10 @@
           <div class="card__meta"><span>Direitos básicos</span><span>•</span><span>7 min</span></div>
         </a>
 
-        <a class="card card--post" href="artigo.html">
+        <a class="card card--post" href="artigos/contrato-experiencia/">
           <img class="card__image"
-               src="assets/img/posts/aluna-animada.avif"
-               alt="aluna animada"
+               src="artigos/contrato-experiencia/capa.avif"
+               alt="Pessoa analisando documento de contrato de experiência"
                loading="lazy">
           <span class="pill">Artigo</span>
           <h3>Contrato de experiência: prazo, renovação e direitos</h3>
@@ -123,10 +101,10 @@
           <div class="card__meta"><span>Direitos básicos</span><span>•</span><span>8 min</span></div>
         </a>
 
-        <a class="card card--post" href="artigo.html">
+        <a class="card card--post" href="artigos/ferias-clt/">
           <img class="card__image"
-               src="assets/img/posts/aproveitando-as-ferias.avif"
-               alt="homem asiatico aproveitando as ferias"
+               src="artigos/ferias-clt/capa.avif"
+               alt="Pessoa relaxando nas férias, com calendário ao fundo"
                loading="lazy">
           <span class="pill">Artigo</span>
           <h3>Férias na CLT: como funciona e quando você recebe</h3>
@@ -134,10 +112,10 @@
           <div class="card__meta"><span>Direitos básicos</span><span>•</span><span>9 min</span></div>
         </a>
 
-        <a class="card card--post" href="artigo.html">
+        <a class="card card--post" href="artigos/fgts/">
           <img class="card__image"
-               src="assets/img/posts/fgts.webp"
-               alt="Aplicativo ou extrato do FGTS no celular"
+               src="artigos/fgts/capa.png"
+               alt="Extrato do FGTS no celular, representando depósitos e saldo"
                loading="lazy">
           <span class="pill">Artigo</span>
           <h3>FGTS: como conferir depósitos e o que fazer se faltar</h3>
@@ -148,7 +126,7 @@
       </div>
     </section>
 
-    <!-- AD 2: entre conteúdos -->
+    <!-- AD 2 -->
     <div class="ad ad--content" data-ad="content" aria-label="Espaço reservado para anúncio">
       <span class="ad__label">Publicidade</span>
     </div>
@@ -172,7 +150,7 @@
       </div>
     </section>
 
-    <!-- AD 3: antes do footer -->
+    <!-- AD 3 -->
     <div class="ad ad--footer" data-ad="footer" aria-label="Espaço reservado para anúncio">
       <span class="ad__label">Publicidade</span>
     </div>
@@ -196,4 +174,5 @@
 
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>
